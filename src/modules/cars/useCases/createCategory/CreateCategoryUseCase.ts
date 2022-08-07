@@ -1,11 +1,17 @@
+import { inject, injectable } from "tsyringe";
 import { ICaregoriesRepository } from "../../repositories/ICaregoriesRepository";
 
 interface IRequest {
   name: string;
   descripition: string;
 }
+
+@injectable()
 class CreateCategoryUseCase {
-  constructor(private categoriesRepository: ICaregoriesRepository) {}
+  constructor(
+    @inject("CategoriesRepository")
+    private categoriesRepository: ICaregoriesRepository
+  ) {}
 
   async execute({ name, descripition }: IRequest): Promise<void> {
     //verifica se há uma categoria de mesmo nome
