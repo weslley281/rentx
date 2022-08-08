@@ -11,12 +11,12 @@ class SpecificationRepository implements ISpecificationRepository {
     this.specifications = [];
   }
 
-  create({ descripition, name }: ICreateSpecificationDTO): void {
+  create({ description, name }: ICreateSpecificationDTO): void {
     const specification = new Specification();
 
     Object.assign(specification, {
       name,
-      descripition,
+      description,
       create_at: new Date(),
     });
 

@@ -10,10 +10,10 @@ class Category {
   name: string;
 
   @Column()
-  descripition: string;
+  description: string;
 
   @CreateDateColumn()
-  create_at: Date;
+  created_at: Date;
 
   constructor() {
     //se não tiver um id ou for um novo objeto

@@ -2,10 +2,10 @@ import { Specification } from "../entities/Specification";
 
 interface ICreateSpecificationDTO {
   name: string;
-  descripition: string;
+  description: string;
 }
 interface ISpecificationRepository {
-  create({ descripition, name }: ICreateSpecificationDTO): void;
+  create({ description, name }: ICreateSpecificationDTO): void;
   findByName(name: string): Specification;
 }
 
