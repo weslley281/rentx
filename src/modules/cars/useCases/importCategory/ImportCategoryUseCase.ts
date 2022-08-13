@@ -1,6 +1,6 @@
 import fs from "fs";
 import { parse as csvParse } from "csv-parse";
-import { ICaregoriesRepository } from "../../repositories/ICaregoriesRepository";
+import { ICaregoriesRepository } from "../../repositories/ICategoriesRepository";
 import { inject, injectable } from "tsyringe";
 
 interface IImportCategory {
