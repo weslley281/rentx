@@ -12,6 +12,10 @@ export class CreateSpecifications1660230918581 implements MigrationInterface {
             isPrimary: true,
           },
           {
+            name: "name",
+            type: "varchar",
+          },
+          {
             name: "description",
             type: "varchar",
           },
