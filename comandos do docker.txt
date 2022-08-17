@@ -1,0 +1,29 @@
+docker build -t nomeDaImagem .   //cria uma imagem
+
+docker ps //mapeamento //mostra os containers ativo
+docker ps -a //mapeamento //mostra os containers
+
+docker stop idDoContainer //parar o container
+docker rm idDoContainer //remove o container
+docker down idDoContainer //para e remove dado do container
+docker-composer down idDoContainer //para e remove dado do container
+docker start idDoContainer //inicia o container
+
+docker run -p 3333:3333 nomeDaImagem   //para rodar o container
+docker-compose up //para rodar o container
+docker-compose up -d //para rodar o container em background
+
+docker logs nomeContainer -f //para ver os logs do container
+
+docker exec -it rentx /bin/bash //para acessar o container
+Ctrl + T //vouta para a aplicação
+
+docker-compose up --force-recreate //para forçar uma nova criação do container
+
+docker-compose start
+
+
+//Migrations
+yarn typeorm migration:create -n NomeDaMigração //cria migração
+yarn typeorm migration:run //para rodar as migrações
+yarn typeorm migration:revert //para reverter as migrações

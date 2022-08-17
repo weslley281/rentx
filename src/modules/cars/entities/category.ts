@@ -16,7 +16,6 @@ class Category {
   created_at: Date;
 
   constructor() {
-    //se não tiver um id ou for um novo objeto
     if (!this.id) {
       this.id = uuidv4();
     }
