@@ -1,9 +1,9 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
     "rootDir": "./",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "outDir": "./dist",
     "strict": false,
     "esModuleInterop": true,
@@ -11,6 +11,6 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   }
 }
