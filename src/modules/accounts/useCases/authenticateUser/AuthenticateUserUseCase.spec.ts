@@ -1,7 +1,6 @@
-//import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepositoryInMemory";
-import { AppError } from "../../../../errors/AppErros";
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepositoryInMemory";
+import { AppError } from "@errors/AppErros";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 
@@ -15,6 +14,8 @@ describe("Authenticate User", () => {
     authenticateUserUseCase = new AuthenticateUserUseCase(
       usersRepositoryInMemory
     );
+
+    createUserUseCase = new CreateUserUseCase(usersRepositoryInMemory);
   });
   it("Should be able to authenticate an user", async () => {
     const user: ICreateUserDTO = {

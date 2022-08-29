@@ -5,11 +5,11 @@ import "express-async-errors";
 
 import "./database";
 
-import "./shared/container";
+import "@shared/container";
 
 import swaggerUi from "swagger-ui-express";
 import swaggerFile from "./swagger.json";
-import { AppError } from "./errors/AppErros";
+import { AppError } from "@errors/AppErros";
 
 const app = express();
 app.use(express.json());
